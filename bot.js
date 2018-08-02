@@ -5,12 +5,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'quran') {
-        message.reply('.');
-      }
-});
-
 client.on('message', function(message) {
 	const myID = "449506099268419595";
     let args = message.content.split(" ").slice(1).join(" ");
