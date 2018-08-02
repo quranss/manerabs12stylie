@@ -5,6 +5,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.login(process.env.BOT_TOKEN);
+
+
 client.on('message', function(message) {
 	const myID = "449506099268419595";
     let args = message.content.split(" ").slice(1).join(" ");
@@ -24,8 +27,6 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-
-client.login(process.env.BOT_TOKEN);
 
 client.on('message', message => {
 const yt = require('ytdl-core');
