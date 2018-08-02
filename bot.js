@@ -60,3 +60,15 @@ client.on('message', function(message) {
         });
     }
 });
+
+client.on('message', msg => {
+
+    if (msg.content == '#come.') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join();
+     }
+    }
+}
+});
