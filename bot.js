@@ -202,6 +202,16 @@ m.sendFile(message.attachments.first().url).catch();
 
 });
 
+client.on('message', message => {
+  if(message.content === '!invite') {
+  const embed = new Discord.RichEmbed()
+  .setTitle('Invite VIP')
+  .setURL('Click')
+  .setColor('FFFFFF')
+  message.author.send(embed);
+  }
+});
+
 client.on('message', msg => {
     if(msg.content === '!help') {
         
@@ -216,15 +226,16 @@ if (msg.author.bot) return;
 Command's :
 -
 !mute - لأعطاء شخص ميوت كتابي
--
+
 !unmute - لفك الميوت الكتابي
--
+
 !setvoice - لانشاء روم عدد المتصلين بالرومات
--
+
 !bc - لارسال رسالة لجميع الموجودين بالسيرفر
--
+
 !join - لدخول البوت معك بالروم الصوتي
 
+!invite - لأضافة البوت الى سيرفرك
 
 All Right are save \ جميع الحقوق محفوظه
 `)
