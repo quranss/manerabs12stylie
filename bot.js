@@ -211,12 +211,23 @@ if (msg.author.bot) return;
   const embed = new Discord.RichEmbed()
             .setColor("FFFFFF")
             .setThumbnail(msg.author.avatarURL)
-                                .setTitle("الاوامر")
-            .setDescription(`!mute - لأعطاء شخص ميوت كتابي
+                                .setTitle("-")
+            .setDescription(`
+Command's :
+-
+!mute - لأعطاء شخص ميوت كتابي
+-
 !unmute - لفك الميوت الكتابي
+-
 !setvoice - لانشاء روم عدد المتصلين بالرومات
+-
 !bc - لارسال رسالة لجميع الموجودين بالسيرفر
-!join - لدخول البوت معك بالروم الصوتي`)
+-
+!join - لدخول البوت معك بالروم الصوتي
+
+
+All Right are save \ جميع الحقوق محفوظه
+`)
 
 
         msg.author.sendEmbed(embed)
